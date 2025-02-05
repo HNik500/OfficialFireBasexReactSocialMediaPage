@@ -23,7 +23,7 @@ const Createform = () => {
   }) 
   const postsRef = collection(db,"posts")
   const onCreatepost= async(data:CreateFormData)=>{
-//console.log(data);
+console.log(data);
 await addDoc(postsRef,{
   // title:data.title,
   // description:data.description,
