@@ -29,7 +29,7 @@ await addDoc(postsRef,{
   // description:data.description,
   ...data,
   username:user?.displayName,
-  UserId:user?.uid,
+  UserId":user?.uid",
   
 })
 
