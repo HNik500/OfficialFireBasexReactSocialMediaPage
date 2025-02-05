@@ -1,6 +1,6 @@
 import Createform from "./CreateForm"
 
-const Createpost = () => {
+export const Createpost = () => {
   return (
     <div>
       Createpost
@@ -10,5 +10,3 @@ const Createpost = () => {
     </div>
   )
 }
-
-export default Createpost
