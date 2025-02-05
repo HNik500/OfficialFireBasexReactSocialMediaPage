@@ -8,7 +8,7 @@ interface CreateFormData{
 }
 const Createform = () => {
   const schema = yup.object().shape({
-    title:yup.string().required("must include title!!"),
+    title:yup.string().required("must include title!!!"),
     description:yup.string().required("must include title!"),
   })
   const {register,handleSubmit,formState:{errors} } =useForm<CreateFormData>({
