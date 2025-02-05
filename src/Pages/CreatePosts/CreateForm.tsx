@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { addDoc,collection } from "firebase/firestore";
 import { auth,db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 interface CreateFormData{
   title:string;
   description:string;
@@ -11,6 +12,7 @@ interface CreateFormData{
 }
 const Createform = () => {
   const [user]=useAuthState(auth);
+  const navigate = useNavigate()
   const schema = yup.object().shape({
     title:yup.string().required("must include title!"),
     description:yup.string().required("must include title!"),
@@ -32,8 +34,9 @@ await addDoc(postsRef,{
   UserId:user?.uid,
   
 })
+navigate("/");
 
-  }
+  };
   return (
     <form action="" onSubmit={handleSubmit(onCreatepost)}>
       <input type="text" placeholder="title..."{...register("title")} />
