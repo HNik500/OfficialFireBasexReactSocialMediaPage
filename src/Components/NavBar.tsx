@@ -13,7 +13,7 @@ await signOut(auth);
     <div className='navbar'>
       <div className='links'>
         <Link to={"/"} className='pr-14'>Home</Link>
-        {!user? (<Link to={"/login"}>Login </Link>):<Link to={"/createpost"} className='pr-14'>Create Post</Link>}
+        {!user? (<Link to={"/login"}>Login.. </Link>):<Link to={"/createpost"} className='pr-14'>Create Post</Link>}
         
         </div>
         <div className='user'>
