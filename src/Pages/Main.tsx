@@ -17,8 +17,8 @@ const data = await getDocs(postsRef);
 SetpostsList(data.docs.map((doc)=>({...doc.data(), id:doc.id})) as Post[]
 );
   } 
-  getPosts();
+  getPosts(); //stopped here
   return (
-    <div>Main Page</div>
+    <div>Main Pages</div>
   )
 }
