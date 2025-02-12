@@ -19,6 +19,6 @@ SetpostsList(data.docs.map((doc)=>({...doc.data(), id:doc.id})) as Post[]
   } 
   getPosts(); //stopped here
   return (
-    <div>Main Pages</div>
+    <div>Main Pagesss</div>
   )
 }
