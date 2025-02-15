@@ -4,6 +4,7 @@ interface Props{
     post: IPost;
 }
 
-export const Post =(props:P rops)=>{
+export const Post =(props:Props)=>{
+    const {post}=props;
     return <div>hi from Post</div>
 }
