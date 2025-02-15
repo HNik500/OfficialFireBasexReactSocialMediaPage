@@ -1,8 +1,9 @@
 //  import React from 'react'
 import {getDocs, collection} from 'firebase/firestore'
 import { db } from '../config/firebase';
-import { useState } from 'react';
-interface Post{
+import { useEffect, useState } from 'react';
+import { Post } from './Post';
+export interface Post{
   id:string,
   userId:string;
   title:string;
@@ -17,8 +18,13 @@ const data = await getDocs(postsRef);
 SetpostsList(data.docs.map((doc)=>({...doc.data(), id:doc.id})) as Post[]
 );
   } 
-  getPosts(); //stopped here
+  useEffect(()=>{
+getPosts();
+  },[])
   return (
-    <div>Main Pages</div>
+    <div>{postsList?.map((post)=>(
+    <Post/>
+  ))}
+  </div>
   )
 }
