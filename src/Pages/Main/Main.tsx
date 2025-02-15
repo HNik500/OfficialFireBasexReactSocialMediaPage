@@ -23,7 +23,7 @@ getPosts();
   },[])
   return (
     <div>{postsList?.map((post)=>(
-    <Post/>
+    <Post post={post}/>
   ))}
   </div>
   )
