@@ -16,5 +16,6 @@ export const Post =(props:Props)=>{
                 {post.description}
             </p>
         </div>
+        <div className="footer"></div>
     </div>
 }
