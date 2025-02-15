@@ -11,6 +11,10 @@ export const Post =(props:Props)=>{
         <div className="title">
             <h1 className="title">{post.title}</h1>
         </div>
-        <div></div>
+        <div className="body">
+            <p>
+                {post.description}
+            </p>
+        </div>
     </div>
 }
