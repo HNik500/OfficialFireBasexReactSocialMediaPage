@@ -1,6 +1,6 @@
 import './App.css'
 import {BrowserRouter as Router, Route,Routes } from "react-router-dom"
-import { Main } from './Pages/Main'
+import { Main } from './Pages/Main/Main'
 import { Login } from './Pages/Login'
 import { NavBar } from './Components/NavBar'
 import { Createpost } from './Pages/CreatePosts/Createpost'
