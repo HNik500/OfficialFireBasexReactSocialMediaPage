@@ -6,7 +6,7 @@ interface Props{
 
 export const Post =(props:Props)=>{
     const {post}=props;
-    return <div>hi from Post
+    return <div>hi from Posts
 
         <div className="title">
             <h1 className="title">{post.title}</h1>
