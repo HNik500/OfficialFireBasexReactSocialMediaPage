@@ -41,7 +41,7 @@ navigate("/");
     <form action="" onSubmit={handleSubmit(onCreatepost)}>
       <input type="text" placeholder="title..."{...register("title")} />
       <p style={{color: "red"}}>{errors.title?.message}</p>
-      <textarea  placeholder="Description....." {...register("description")} />
+      <textarea  placeholder="Description....." {...regster("description")} />
       <p  style={{color:"red"}}>{errors.description?.message}</p>
       <input type="submit" />
 
