@@ -11,7 +11,10 @@ export const Login =  () => {
         navigate("/")
     }
   return (
-    <div><p>Sign in with google to continue</p>
+    <div><p>Sign in with dgit add .
+    git commit -m " started mini" 
+    git push
+    google to continue</p>
     <button onClick={signInWithGoogle}>Sign in with Google</button>
     </div>
   )
