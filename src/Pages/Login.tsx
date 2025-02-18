@@ -15,4 +15,4 @@ export const Login =  () => {
     <button onClick={signInWithGoogle}>Sign in with Google</button>
     </div>
   )
-
+}
