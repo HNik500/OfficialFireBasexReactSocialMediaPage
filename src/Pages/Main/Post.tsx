@@ -12,27 +12,12 @@ export const Post =(props:Props)=>{
     const [user]=useAuthState(auth);
       const LikesRef = collection(db,"likes");
 
-      const addLike = async () => {
-        if (!user) {
-            console.error("❌ Error: User is not logged in");
-            return;
-        }
-        if (!post?.id) {
-            console.error("❌ Error: Post ID is undefined");
-            return;
-        }
+      const addLike= async()=>{
+    //console.log(data);
+    await addDoc(LikesRef,{UserId:user?.uid ,postId:post.id}); 
+//    navigate("/");
     
-        console.log("✅ User ID:", user.uid);
-        console.log("✅ Post ID:", post.id);
-    
-        try {
-            await addDoc(collection(db, "likes"), { userId: user.uid, postId: post.id });
-            console.log("🎉 Like added successfully!");
-        } catch (error) {
-            console.error("❌ Firestore write error:", error);
-        }
-    };
-    
+      };
     return <div>hi from Posts
 
         <div className="title">
