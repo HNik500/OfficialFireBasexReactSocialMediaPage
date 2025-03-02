@@ -14,7 +14,7 @@ export const Post =(props:Props)=>{
 
       const addLike= async()=>{
     //console.log(data);
-    await addDoc(LikesRef,{UserId:user?.uid ,postId:post.id}); 
+    await addDoc(LikesRef,{UserId:user?.uid ,postId:post.id});  // main problem was that i was bad naming so i had user.Id while in my rules i had User.Id so since they didn't match it gave me an error, so i went to my database and changed my user.Id to User.Id and after doing that it is sucessfully adding likes to my database!.
 //    navigate("/");
     
       };
