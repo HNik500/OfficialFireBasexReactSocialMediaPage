@@ -23,7 +23,7 @@ getPosts();
   },[])
   return (
     <div>{postsList?.map((post)=>(
-    <Post post={post}/>
+    <Post key ={post.id} post={post}/>
   ))}
   </div>
   )
