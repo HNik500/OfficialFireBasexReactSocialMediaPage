@@ -22,7 +22,7 @@ export const Post =(props:Props)=>{
 
         <div className="title">
             <h1 className="title">{post.title}</h1>
-        </div> ff
+        </div> 
         <div className="body">
             <p>
                 {post.description}
